@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #001f3f; /* Fundo azul escuro para todo o site */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff; /* Fundo branco para a caixa principal de conteúdo */
+    padding: 30px;
+    border-radius: 50px; /* Mais puxado para o circular */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    text-align: left; /* Padrão do container, mas ajustaremos elementos internos */
+    box-sizing: border-box;
+}
+
+/* Centraliza o container em páginas individuais */
+body:not(.homepage) .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centraliza o texto das páginas internas */
+}
+
+h1, h2 {
+    color: #0056b3;
+    text-align: center;
+    font-weight: 700; /* Títulos em negrito */
+    margin-bottom: 20px;
+}
+
+p {
+    font-weight: 400; /* Texto normal */
+    margin-bottom: 10px;
+}
+
+p strong {
+    font-weight: 600; /* Partes importantes em negrito */
+}
+
+
+/* === CORRECTED SECTION === */
+.tagline {
+    font-weight: 700; /* Negrito */
+    font-size: 1.3em; /* Aumenta um pouco o tamanho da fonte */
+    text-align: center; /* CENTRALIZA A FRASE */
+    margin-bottom: 30px; /* Espaçamento abaixo da frase */
+    color: #333; /* Mantém a cor para contrastar com o fundo branco do container */
+    /* Adiciona um pequeno respiro nas laterais para não colar nas bordas em telas menores */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.profile-image-container {
+    margin-bottom: 20px; /* Reduzi um pouco para compensar o nome e idade */
+    text-align: center;
+}
+
+.profile-image {
+    width: 200px; /* Tamanho da imagem */
+    height: 200px; /* Altura da imagem */
+    border-radius: 50%; /* Formato circular */
+    border: 5px solid #001f3f; /* Borda branca */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    object-position: center 65%; /* Ajuste para mover o rosto mais para baixo. Teste com 70%, 80% se precisar. */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    text-align: center;
+    margin-bottom: 30px; /* Espaço abaixo do nome/idade e acima da tagline */
+    color: #333; /* Cor do texto */
+}
+
+.profile-info h2 { /* Estilo para o nome */
+    margin: 10px 0 5px 0; /* Margem entre a foto, nome e idade */
+    color: #0056b3; /* Cor do título */
+    font-weight: 700; /* Negrito para o nome */
+    font-size: 1.5em; /* Tamanho um pouco maior para o nome */
+}
+
+.profile-info p { /* Estilo para a idade */
+    margin: 0;
+    font-size: 1.1em; /* Tamanho um pouco maior para a idade */
+    color: #555;
+}
+
+.buttons-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    flex: 1 1 calc(50% - 40px); /* Dois botões por linha, com espaçamento */
+    max-width: calc(50% - 40px);
+    padding: 15px 25px;
+    background-color: #004d99; /* Azul um pouco mais claro para contraste */
+    color: white;
+    text-decoration: none;
+    border-radius: 30px; /* Botões mais circulares */
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Um azul um pouco mais claro no hover */
+    transform: translateY(-3px);
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px; /* Botão de voltar mais circular */
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+        border-radius: 30px;
+    }
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+    .button {
+        flex: 1 1 100%; /* Um botão por linha em telas menores */
+        max-width: 100%;
+    }
+    .tagline {
+        font-size: 1.1em;
+    }
+    .profile-info h2 {
+        font-size: 1.3em;
+    }
+    .profile-info p {
+        font-size: 1em;
+    }
+}
